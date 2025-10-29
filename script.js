@@ -5,6 +5,8 @@
   const navToggle = document.querySelector('.nav-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const focusableMenuItems = mobileMenu.querySelectorAll('a');
+  const supportAction = document.querySelector('.support-action');
+  const mobileQuery = window.matchMedia('(max-width: 960px)');
 
   const trapFocus = (event) => {
     if (!mobileMenu.classList.contains('open')) return;
@@ -50,10 +52,29 @@
     }
   });
 
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY > 12;
+  const syncHeaderState = () => {
+    const scrolled = window.scrollY > 12 || mobileQuery.matches;
     header.classList.toggle('scrolled', scrolled);
-  }, { passive: true });
+  };
+
+  syncHeaderState();
+
+  window.addEventListener('scroll', syncHeaderState, { passive: true });
+  if (typeof mobileQuery.addEventListener === 'function') {
+    mobileQuery.addEventListener('change', syncHeaderState);
+  } else if (typeof mobileQuery.addListener === 'function') {
+    mobileQuery.addListener(syncHeaderState);
+  }
+
+  if (supportAction) {
+    supportAction.addEventListener('click', () => {
+      const targetSelector = supportAction.getAttribute('data-target');
+      const target = targetSelector ? document.querySelector(targetSelector) : null;
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
