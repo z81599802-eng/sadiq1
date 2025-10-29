@@ -471,42 +471,49 @@ i[data-lucide] {
 }
 
 .terms-main,
-.privacy-main {
+.privacy-main,
+.refund-main {
   padding-bottom: 4rem;
 }
 
 
 .terms-hero,
-.privacy-hero {
+.privacy-hero,
+.refund-hero {
   background: linear-gradient(145deg, rgba(93, 126, 255, 0.2), rgba(93, 126, 255, 0.14) 35%, rgba(63, 223, 176, 0.22));
   padding: clamp(1.4rem, 4.5vw, 2.6rem) 0 clamp(1.1rem, 4vw, 2.3rem);
 }
 
 .terms-header,
-.privacy-header {
+.privacy-header,
+.refund-header {
   display: grid;
   gap: 1rem;
   padding: clamp(1.75rem, 6vw, 3.25rem) 0 clamp(1rem, 4vw, 1.75rem);
 }
 
 .privacy-header h1,
-.terms-header h1 {
+.terms-header h1,
+.refund-header h1 {
   margin-bottom: 0.35rem;
 }
 
 .privacy-subtitle,
-.terms-subtitle {
+.terms-subtitle,
+.refund-subtitle {
   margin: 0;
   margin-bottom: clamp(0.65rem, 2.5vw, 1rem);
 }
 
 .privacy-updated,
-.terms-updated {
+.terms-updated,
+.refund-updated {
   margin: 0;
 }
 
 .terms-breadcrumb,
-.privacy-breadcrumb {
+.privacy-breadcrumb,
+.refund-breadcrumb {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -515,32 +522,37 @@ i[data-lucide] {
 }
 
 .terms-breadcrumb a,
-.privacy-breadcrumb a {
+.privacy-breadcrumb a,
+.refund-breadcrumb a {
   color: var(--text);
   font-weight: 500;
 }
 
 .terms-subtitle,
-.privacy-subtitle {
+.privacy-subtitle,
+.refund-subtitle {
   font-size: 1.1rem;
   max-width: 720px;
   color: var(--muted);
 }
 
 .terms-updated,
-.privacy-updated {
+.privacy-updated,
+.refund-updated {
   color: rgba(30, 41, 59, 0.6);
   font-weight: 500;
 }
 
 
 .terms-content,
-.privacy-content {
+.privacy-content,
+.refund-content {
   padding: clamp(1rem, 4vw, 1.5rem) 0 clamp(3rem, 9vw, 5rem);
 }
 
 .terms-card,
-.privacy-card {
+.privacy-card,
+.refund-card {
   background: var(--surface-strong);
   border-radius: 28px;
   border: 1px solid rgba(148, 163, 184, 0.35);
@@ -549,7 +561,8 @@ i[data-lucide] {
 }
 
 .terms-list,
-.privacy-list {
+.privacy-list,
+.refund-list {
   margin: 0;
   padding-left: 1.5rem;
   display: grid;
@@ -558,32 +571,37 @@ i[data-lucide] {
 }
 
 .terms-list > li,
-.privacy-list > li {
+.privacy-list > li,
+.refund-list > li {
   counter-increment: terms-counter;
   position: relative;
   padding-left: 0.25rem;
 }
 
 .terms-list > li::marker,
-.privacy-list > li::marker {
+.privacy-list > li::marker,
+.refund-list > li::marker {
   font-weight: 600;
   color: #3fe0c9;
 }
 
 .terms-list h3,
-.privacy-list h3 {
+.privacy-list h3,
+.refund-list h3 {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
 .terms-list p,
-.privacy-list p {
+.privacy-list p,
+.refund-list p {
   color: var(--muted);
   margin-bottom: 1rem;
 }
 
 .terms-list ul,
-.privacy-list ul {
+.privacy-list ul,
+.refund-list ul {
   list-style: disc;
   padding-left: 1.25rem;
   display: grid;
@@ -591,8 +609,21 @@ i[data-lucide] {
 }
 
 .terms-list ul li,
-.privacy-list ul li {
+.privacy-list ul li,
+.refund-list ul li {
   margin: 0;
+}
+
+.refund-summary {
+  background: rgba(63, 223, 176, 0.18);
+  color: #045c47;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
 }
 
 .contact-redirect {
