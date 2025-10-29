@@ -470,6 +470,126 @@ i[data-lucide] {
   text-decoration: underline;
 }
 
+.terms-main {
+  padding-bottom: 4rem;
+}
+
+.terms-hero {
+  background: linear-gradient(135deg, rgba(236, 242, 255, 0.9), rgba(228, 250, 244, 0.75));
+  padding-bottom: clamp(2.5rem, 8vw, 5rem);
+}
+
+.terms-header {
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(3rem, 9vw, 5rem) 0 clamp(1.5rem, 6vw, 2.75rem);
+}
+
+.terms-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.terms-breadcrumb a {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.terms-subtitle {
+  font-size: 1.1rem;
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.terms-updated {
+  color: rgba(30, 41, 59, 0.6);
+  font-weight: 500;
+}
+
+.terms-content {
+  padding: 0 0 clamp(3rem, 9vw, 5rem);
+}
+
+.terms-card {
+  background: var(--surface-strong);
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
+  padding: clamp(2.25rem, 6vw, 3.5rem);
+}
+
+.terms-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 2rem;
+  counter-reset: terms-counter;
+}
+
+.terms-list > li {
+  counter-increment: terms-counter;
+  position: relative;
+  padding-left: 0.25rem;
+}
+
+.terms-list > li::marker {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.terms-list h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.terms-list p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.terms-list ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--muted);
+}
+
+.terms-list ul li {
+  margin: 0;
+}
+
+.contact-redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-redirect-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2.5rem, 8vw, 4.5rem) 0;
+}
+
+.contact-redirect-card {
+  background: var(--surface-strong);
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
+  padding: clamp(2.25rem, 6vw, 3.5rem);
+  text-align: center;
+  max-width: 520px;
+}
+
+.contact-redirect-card p {
+  color: var(--muted);
+}
+
 .hero-faq .faq-list {
   display: grid;
   gap: 1rem;
