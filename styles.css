@@ -475,10 +475,11 @@ i[data-lucide] {
   padding-bottom: 4rem;
 }
 
+
 .terms-hero,
 .privacy-hero {
   background: linear-gradient(145deg, rgba(93, 126, 255, 0.2), rgba(93, 126, 255, 0.14) 35%, rgba(63, 223, 176, 0.22));
-  padding: clamp(1.75rem, 5vw, 3.1rem) 0 clamp(1.5rem, 5vw, 2.75rem);
+  padding: clamp(1.4rem, 4.5vw, 2.6rem) 0 clamp(1.1rem, 4vw, 2.3rem);
 }
 
 .terms-header,
@@ -486,6 +487,22 @@ i[data-lucide] {
   display: grid;
   gap: 1rem;
   padding: clamp(1.75rem, 6vw, 3.25rem) 0 clamp(1rem, 4vw, 1.75rem);
+}
+
+.privacy-header h1,
+.terms-header h1 {
+  margin-bottom: 0.35rem;
+}
+
+.privacy-subtitle,
+.terms-subtitle {
+  margin: 0;
+  margin-bottom: clamp(0.65rem, 2.5vw, 1rem);
+}
+
+.privacy-updated,
+.terms-updated {
+  margin: 0;
 }
 
 .terms-breadcrumb,
@@ -516,9 +533,10 @@ i[data-lucide] {
   font-weight: 500;
 }
 
+
 .terms-content,
 .privacy-content {
-  padding: 0 0 clamp(3rem, 9vw, 5rem);
+  padding: clamp(1rem, 4vw, 1.5rem) 0 clamp(3rem, 9vw, 5rem);
 }
 
 .terms-card,
@@ -527,7 +545,7 @@ i[data-lucide] {
   border-radius: 28px;
   border: 1px solid rgba(148, 163, 184, 0.35);
   box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
-  padding: clamp(1.75rem, 5vw, 2.75rem) clamp(2.25rem, 6vw, 3.5rem) clamp(2.5rem, 6vw, 3.5rem);
+  padding: clamp(2rem, 5.5vw, 3rem) clamp(2.25rem, 6vw, 3.5rem) clamp(2.5rem, 6vw, 3.5rem);
 }
 
 .terms-list,
@@ -549,7 +567,7 @@ i[data-lucide] {
 .terms-list > li::marker,
 .privacy-list > li::marker {
   font-weight: 600;
-  color: var(--accent);
+  color: #3fe0c9;
 }
 
 .terms-list h3,
@@ -575,8 +593,6 @@ i[data-lucide] {
 .terms-list ul li,
 .privacy-list ul li {
   margin: 0;
-  color: var(--text);
-  font-weight: 600;
 }
 
 .contact-redirect {
