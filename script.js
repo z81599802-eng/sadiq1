@@ -34,7 +34,6 @@
     const isOpen = force ?? !mobileMenu.classList.contains('open');
     mobileMenu.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
-    document.body.style.overflow = isOpen ? 'hidden' : '';
 
     if (isOpen && focusableMenuItems.length > 0) {
       focusableMenuItems[0].focus();
