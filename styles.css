@@ -485,29 +485,23 @@ i[data-lucide] {
 .terms-header,
 .privacy-header {
   display: grid;
-  gap: 0.75rem;
-  padding: clamp(1.25rem, 5vw, 2.6rem) 0 clamp(0.75rem, 3.5vw, 1.5rem);
-}
-
-.terms-hero {
-  padding: clamp(1.75rem, 5vw, 3.1rem) 0 clamp(1.5rem, 5vw, 2.75rem);
-}
-
-.terms-header {
   gap: 1rem;
   padding: clamp(1.75rem, 6vw, 3.25rem) 0 clamp(1rem, 4vw, 1.75rem);
 }
 
-.privacy-header h1 {
+.privacy-header h1,
+.terms-header h1 {
   margin-bottom: 0.35rem;
 }
 
-.privacy-subtitle {
+.privacy-subtitle,
+.terms-subtitle {
   margin: 0;
   margin-bottom: clamp(0.65rem, 2.5vw, 1rem);
 }
 
-.privacy-updated {
+.privacy-updated,
+.terms-updated {
   margin: 0;
 }
 
@@ -545,10 +539,6 @@ i[data-lucide] {
   padding: clamp(1rem, 4vw, 1.5rem) 0 clamp(3rem, 9vw, 5rem);
 }
 
-.terms-content {
-  padding: 0 0 clamp(3rem, 9vw, 5rem);
-}
-
 .terms-card,
 .privacy-card {
   background: var(--surface-strong);
@@ -556,15 +546,6 @@ i[data-lucide] {
   border: 1px solid rgba(148, 163, 184, 0.35);
   box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
   padding: clamp(2rem, 5.5vw, 3rem) clamp(2.25rem, 6vw, 3.5rem) clamp(2.5rem, 6vw, 3.5rem);
-}
-
-.terms-card {
-  padding: clamp(1.75rem, 5vw, 2.75rem) clamp(2.25rem, 6vw, 3.5rem) clamp(2.5rem, 6vw, 3.5rem);
-}
-
-.privacy-card {
-  margin-top: clamp(-3rem, -8vw, -1.75rem);
-  padding-top: clamp(2.75rem, 6.5vw, 3.85rem);
 }
 
 .terms-list,
@@ -586,7 +567,7 @@ i[data-lucide] {
 .terms-list > li::marker,
 .privacy-list > li::marker {
   font-weight: 600;
-  color: var(--accent);
+  color: #3fe0c9;
 }
 
 .terms-list h3,
@@ -612,15 +593,6 @@ i[data-lucide] {
 .terms-list ul li,
 .privacy-list ul li {
   margin: 0;
-  font-weight: 600;
-}
-
-.terms-list ul li {
-  color: var(--text);
-}
-
-.privacy-list ul li {
-  color: var(--accent);
 }
 
 .contact-redirect {
