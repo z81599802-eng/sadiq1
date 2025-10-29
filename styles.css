@@ -559,14 +559,20 @@ i[data-lucide] {
 .nav-toggle {
   display: none;
   position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--transition);
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  background: rgba(15, 23, 42, 0.06);
 }
 
 .nav-toggle span {
@@ -576,36 +582,35 @@ i[data-lucide] {
   height: 2px;
   background: var(--text);
   border-radius: 999px;
-  transform: translateX(-50%);
   transform-origin: center;
-  transition: transform var(--transition), opacity var(--transition), top var(--transition), background var(--transition);
+  transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 200ms ease,
+    background var(--transition);
 }
 
 .nav-toggle span:nth-child(1) {
-  top: calc(50% - 8px);
+  transform: translate(-50%, -8px);
 }
 
 .nav-toggle span:nth-child(2) {
-  top: 50%;
+  transform: translate(-50%, 0);
 }
 
 .nav-toggle span:nth-child(3) {
-  top: calc(50% + 8px);
+  transform: translate(-50%, 8px);
 }
 
 .nav-toggle[aria-expanded="true"] span:nth-child(1) {
-  top: 50%;
-  transform: translateX(-50%) rotate(45deg);
+  transform: translate(-50%, 0) rotate(45deg);
 }
 
 .nav-toggle[aria-expanded="true"] span:nth-child(2) {
   opacity: 0;
-  transform: translateX(-50%) scaleX(0.2);
+  transform: translate(-50%, 0) scaleX(0.2);
 }
 
 .nav-toggle[aria-expanded="true"] span:nth-child(3) {
-  top: 50%;
-  transform: translateX(-50%) rotate(-45deg);
+  transform: translate(-50%, 0) rotate(-45deg);
 }
 
 .nav-toggle[aria-expanded="true"] span {
