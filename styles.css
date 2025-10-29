@@ -603,7 +603,9 @@ i[data-lucide] {
 }
 
 .nav-toggle[aria-expanded="true"] span:nth-child(1) {
-  --offset: -6px;
+  --offset: 0px;
+  --rotate: 45deg;
+  background: var(--accent);
 }
 
 .nav-toggle[aria-expanded="true"] span:nth-child(2) {
