@@ -103,17 +103,17 @@ ul {
   gap: 1rem;
   padding: 0.65rem 1.5rem;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  /*border: 1px solid rgba(148, 163, 184, 0.2);*/
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  /*box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);*/
   transition: background-color var(--transition), border var(--transition), box-shadow var(--transition);
 }
 
 .nav-wrapper.scrolled .nav-container {
   background: var(--surface-strong);
   backdrop-filter: blur(24px);
-  border: 1px solid var(--border);
+  /*border: 1px solid var(--border);*/
   box-shadow: var(--shadow);
 }
 
@@ -291,8 +291,8 @@ main > .hero:first-of-type {
   content: "";
   position: absolute;
   inset: 6% 14%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 65%),
-              linear-gradient(115deg, rgba(76, 141, 255, 0.18), transparent 70%);
+  /*background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 65%),
+              linear-gradient(115deg, rgba(76, 141, 255, 0.18), transparent 70%);*/
   mix-blend-mode: screen;
   opacity: 0.65;
   pointer-events: none;
@@ -890,16 +890,10 @@ i[data-lucide] {
   padding: clamp(1.4rem, 4.5vw, 2.6rem) 0 clamp(1.1rem, 4vw, 2.3rem);
 }
 
-.terms-hero {
-  background: linear-gradient(135deg, rgba(246, 218, 255, 0.92), rgba(207, 181, 255, 0.8) 35%, rgba(153, 132, 255, 0.9));
-}
-
-.privacy-hero {
-  background: linear-gradient(140deg, rgba(217, 248, 255, 0.95), rgba(177, 228, 255, 0.82) 40%, rgba(105, 194, 255, 0.9));
-}
-
+.terms-hero,
+.privacy-hero,
 .refund-hero {
-  background: linear-gradient(140deg, rgba(255, 241, 214, 0.95), rgba(255, 215, 170, 0.85) 42%, rgba(255, 178, 120, 0.92));
+  background: linear-gradient(150deg, rgba(237, 244, 255, 0.95) 0%, rgba(198, 219, 255, 0.9) 35%, rgba(82, 149, 249, 0.9) 90%);
 }
 
 .terms-header,
@@ -1212,18 +1206,20 @@ i[data-lucide] {
   border-radius: 999px;
 }
 
-.nav-toggle:hover,
+/*change to adapt the effect on menu toggle*/
+/*.nav-toggle:hover,
 .nav-toggle:focus-visible {
-  background: rgba(15, 23, 42, 0.06);
+ background: #f4f4f7;
   box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.25);
-}
+}*/
 
-.nav-toggle span:not(.sr-only) {
+.nav-toggle span:nth-of-type(2),
+.nav-toggle span:nth-of-type(3) {
   --offset: 0px;
   --rotate: 0deg;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   width: 23px;
   height: 2.5px;
   background: var(--text);
@@ -1235,24 +1231,24 @@ i[data-lucide] {
     background var(--transition);
 }
 
-.nav-toggle span:not(.sr-only):first-of-type {
-  --offset: -6px;
+.nav-toggle span:nth-of-type(2) {
+  --offset: -4.5px;
 }
 
-.nav-toggle span:not(.sr-only):last-of-type {
-  --offset: 6px;
+.nav-toggle span:nth-of-type(3) {
+  --offset: 4.5px;
 }
 
-.nav-toggle[aria-expanded="true"] span:not(.sr-only):first-of-type {
+.nav-toggle[aria-expanded="true"] span:nth-of-type(2) {
   --offset: 0px;
   --rotate: 45deg;
-  background: var(--accent);
+  background: #2669ff;
 }
 
-.nav-toggle[aria-expanded="true"] span:not(.sr-only):last-of-type {
+.nav-toggle[aria-expanded="true"] span:nth-of-type(3) {
   --offset: 0px;
   --rotate: -45deg;
-  background: var(--accent);
+  background: #2669ff;
 }
 
 .mobile-menu {
@@ -1377,10 +1373,6 @@ i[data-lucide] {
     letter-spacing: 0.08em;
   }
 
-  .nav-container > .btn-outline {
-    display: none;
-  }
-
   .hero {
     padding: 2.9rem 0;
   }
@@ -1408,4 +1400,8 @@ i[data-lucide] {
     flex-direction: column;
     align-items: stretch;
   }
+
+  .refund-summary {
+  border-radius: 1.5rem;
+}
 }
