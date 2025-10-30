@@ -75,11 +75,54 @@
     });
   }
 
+  const ensureFocus = (target) => {
+    if (!target || typeof target.focus !== 'function') {
+      return () => {};
+    }
+
+    const hadTabIndex = target.hasAttribute('tabindex');
+
+    if (!hadTabIndex) {
+      target.setAttribute('tabindex', '-1');
+    }
+
+    target.focus({ preventScroll: true });
+
+    return () => {
+      if (!hadTabIndex) {
+        target.removeAttribute('tabindex');
+      }
+    };
+  };
+
   const backToTopButtons = document.querySelectorAll('.back-to-top');
   backToTopButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
+      const targetSelector = button.getAttribute('href');
+
+      if (!targetSelector || !targetSelector.startsWith('#')) {
+        return;
+      }
+
+      const target = document.querySelector(targetSelector);
+
+      if (!target) {
+        return;
+      }
+
       event.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const cleanup = ensureFocus(target);
+
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      if (window.history && typeof window.history.replaceState === 'function') {
+        window.history.replaceState(null, '', targetSelector);
+      } else {
+        window.location.hash = targetSelector;
+      }
+
+      target.addEventListener('blur', cleanup, { once: true });
     });
   });
 
