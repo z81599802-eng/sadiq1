@@ -1217,21 +1217,21 @@ i[data-lucide] {
     background var(--transition);
 }
 
-.nav-toggle span:not(.sr-only):first-of-type {
+.nav-toggle span:not(.sr-only):nth-of-type(2) {
   --offset: -6px;
 }
 
-.nav-toggle span:not(.sr-only):last-of-type {
+.nav-toggle span:not(.sr-only):nth-of-type(3) {
   --offset: 6px;
 }
 
-.nav-toggle[aria-expanded="true"] span:not(.sr-only):first-of-type {
+.nav-toggle[aria-expanded="true"] span:not(.sr-only):nth-of-type(2) {
   --offset: 0px;
   --rotate: 45deg;
   background: var(--accent);
 }
 
-.nav-toggle[aria-expanded="true"] span:not(.sr-only):last-of-type {
+.nav-toggle[aria-expanded="true"] span:not(.sr-only):nth-of-type(3) {
   --offset: 0px;
   --rotate: -45deg;
   background: var(--accent);
