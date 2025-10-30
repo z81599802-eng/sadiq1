@@ -962,6 +962,7 @@ i[data-lucide] {
 }
 
 .site-footer {
+  position: relative;
   padding: 4rem 0 2.5rem;
   background: rgba(15, 23, 42, 0.05);
   border-top: 1px solid rgba(148, 163, 184, 0.35);
@@ -993,6 +994,44 @@ i[data-lucide] {
   color: rgba(30, 41, 59, 0.5);
   margin-top: 2.25rem;
   font-size: 0.85rem;
+}
+
+.back-to-top {
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.5rem);
+  bottom: clamp(1rem, 3vw, 2.5rem);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--text);
+  color: var(--background, #fff);
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.16);
+  background: var(--primary, #2563eb);
+  color: #fff;
+}
+
+.back-to-top i {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    position: static;
+    margin: 2rem auto 0;
+    justify-content: center;
+  }
 }
 
 .nav-toggle {
