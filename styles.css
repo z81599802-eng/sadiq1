@@ -37,6 +37,13 @@ body {
   overflow-x: hidden;
 }
 
+.about-page {
+  background:
+    radial-gradient(90% 90% at 10% 10%, rgba(255, 210, 172, 0.35), transparent 55%),
+    radial-gradient(120% 120% at 85% 15%, rgba(165, 214, 255, 0.45), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f2f6ff 48%, #e8f0ff 100%);
+}
+
 .about-page h1 {
   font-size: clamp(2.75rem, 4.6vw, 3.6rem);
   letter-spacing: -0.01em;
@@ -880,8 +887,19 @@ i[data-lucide] {
 .terms-hero,
 .privacy-hero,
 .refund-hero {
-  background: linear-gradient(145deg, rgba(76, 141, 255, 0.2), rgba(76, 141, 255, 0.14) 35%, rgba(31, 92, 255, 0.22));
   padding: clamp(1.4rem, 4.5vw, 2.6rem) 0 clamp(1.1rem, 4vw, 2.3rem);
+}
+
+.terms-hero {
+  background: linear-gradient(135deg, rgba(246, 218, 255, 0.92), rgba(207, 181, 255, 0.8) 35%, rgba(153, 132, 255, 0.9));
+}
+
+.privacy-hero {
+  background: linear-gradient(140deg, rgba(217, 248, 255, 0.95), rgba(177, 228, 255, 0.82) 40%, rgba(105, 194, 255, 0.9));
+}
+
+.refund-hero {
+  background: linear-gradient(140deg, rgba(255, 241, 214, 0.95), rgba(255, 215, 170, 0.85) 42%, rgba(255, 178, 120, 0.92));
 }
 
 .terms-header,
