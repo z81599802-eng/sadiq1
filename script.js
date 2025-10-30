@@ -75,6 +75,14 @@
     });
   }
 
+  const backToTopButtons = document.querySelectorAll('.back-to-top');
+  backToTopButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
