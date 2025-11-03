@@ -384,11 +384,18 @@ main > .hero:first-of-type {
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.75rem;
   color: var(--accent-2);
   margin-bottom: 1rem;
+}
+
+.eyebrow span {
+  display: inline-block;
 }
 
 .lead {
@@ -497,15 +504,24 @@ main > .hero:first-of-type {
 }
 
 i[data-lucide] {
-  color: #4c9fff;
+  color: #3675ff;
   width: 2.25rem;
   height: 2.25rem;
   stroke-width: 2;
 }
 
+.eyebrow i[data-lucide] {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
 .feature-card:hover i[data-lucide],
 .feature-card:focus-within i[data-lucide] {
-  color: #b5cdff;
+  color: #5c90ff;
+}
+
+.site-footer h3 a {
+  color: inherit;
 }
 
 .support-icon {
