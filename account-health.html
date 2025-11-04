@@ -31,112 +31,37 @@
     <div class="sidebar-overlay" data-sidebar-overlay></div>
     <div class="page-content">
       <header class="dashboard-header">
-        <div class="header-left">
-          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
-            <span class="sr-only">Toggle sidebar</span>
-            <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
-          </button>
-          <div class="header-title">
-            <small>Account health</small>
-            <h1>Account health</h1>
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="header-brand">
-            <span>Wissen Ecom</span>
-            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+        <div class="header-inner">
+          <div class="header-left">
+            <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
               <span class="sr-only">Toggle sidebar</span>
-              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
+            </button>
+            <div class="header-title">
+              <small data-header-subtitle></small>
+              <h1 data-header-title></h1>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-brand">
+              <span class="brand">Wissen Ecom</span>
+              <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+                <span class="sr-only">Toggle sidebar</span>
+                <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              </button>
+            </div>
+            <button class="btn logout-btn" type="button">
+              <i aria-hidden="true" data-lucide="log-out"></i>
+              <span>Logout</span>
             </button>
           </div>
-          <button class="btn logout-btn" type="button">
-            <i aria-hidden="true" data-lucide="log-out"></i>
-            <span>Logout</span>
-          </button>
         </div>
+        <div class="sr-only" aria-live="polite" data-page-announcer></div>
       </header>
-      <main class="page-main">
-        <section class="content-section" aria-labelledby="health-snapshot">
-          <h2 id="health-snapshot">Health snapshot</h2>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <h3>Account health rating</h3>
-              <p class="stat-value">982</p>
-              <p class="stat-caption">Excellent · No open critical violations</p>
-            </article>
-            <article class="stat-card">
-              <h3>Policy warnings</h3>
-              <p class="stat-value">1</p>
-              <p class="stat-caption">Document authenticity check pending for SKU-LM55</p>
-            </article>
-            <article class="stat-card">
-              <h3>Late dispatch rate</h3>
-              <p class="stat-value">0.3%</p>
-              <p class="stat-caption">Within compliance threshold of 2%</p>
-            </article>
-            <article class="stat-card">
-              <h3>Pre-fulfilment cancellations</h3>
-              <p class="stat-value">0.6%</p>
-              <p class="stat-caption">Resolve backlog for Seller-Fulfilled Prime SKUs</p>
-            </article>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="compliance-alerts">
-          <h2 id="compliance-alerts">Compliance alerts</h2>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">Alert</th>
-                  <th scope="col">ASIN/SKU</th>
-                  <th scope="col">Received</th>
-                  <th scope="col">Owner</th>
-                  <th scope="col">Next action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Document verification</td>
-                  <td>B09-PL55</td>
-                  <td>Today</td>
-                  <td>Compliance</td>
-                  <td>Upload invoice proof within 48h</td>
-                </tr>
-                <tr>
-                  <td>Restricted product review</td>
-                  <td>SKU-LM55</td>
-                  <td>Yesterday</td>
-                  <td>Legal</td>
-                  <td>Provide lab test certificate</td>
-                </tr>
-                <tr>
-                  <td>Listing quality alert</td>
-                  <td>SKU-RT32</td>
-                  <td>2 days ago</td>
-                  <td>Catalogue</td>
-                  <td>Refresh bullet points &amp; claims</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="support-cases">
-          <h2 id="support-cases">Support cases</h2>
-          <div class="glance-grid">
-            <article class="glance-card">
-              <h3>Performance notifications</h3>
-              <p>0 unresolved. Monitor daily during peak events.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Customer escalations</h3>
-              <p>3 cases awaiting Amazon response; follow up after 12 hours.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Plan of action</h3>
-              <p>No POA submissions due. Prepare template updates quarterly.</p>
-            </article>
-          </div>
-        </section>
+      <main class="page-main" data-dynamic-main>
+        <div class="page-fallback" role="status">
+          <p>This dashboard loads content dynamically. Enable JavaScript to continue.</p>
+        </div>
       </main>
     </div>
   </div>

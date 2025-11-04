@@ -31,124 +31,37 @@
     <div class="sidebar-overlay" data-sidebar-overlay></div>
     <div class="page-content">
       <header class="dashboard-header">
-        <div class="header-left">
-          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
-            <span class="sr-only">Toggle sidebar</span>
-            <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
-          </button>
-          <div class="header-title">
-            <small>Campaigns</small>
-            <h1>Campaigns</h1>
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="header-brand">
-            <span>Wissen Ecom</span>
-            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+        <div class="header-inner">
+          <div class="header-left">
+            <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
               <span class="sr-only">Toggle sidebar</span>
-              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
+            </button>
+            <div class="header-title">
+              <small data-header-subtitle></small>
+              <h1 data-header-title></h1>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-brand">
+              <span class="brand">Wissen Ecom</span>
+              <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+                <span class="sr-only">Toggle sidebar</span>
+                <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              </button>
+            </div>
+            <button class="btn logout-btn" type="button">
+              <i aria-hidden="true" data-lucide="log-out"></i>
+              <span>Logout</span>
             </button>
           </div>
-          <button class="btn logout-btn" type="button">
-            <i aria-hidden="true" data-lucide="log-out"></i>
-            <span>Logout</span>
-          </button>
         </div>
+        <div class="sr-only" aria-live="polite" data-page-announcer></div>
       </header>
-      <main class="page-main">
-        <section class="content-section" aria-labelledby="campaign-performance">
-          <h2 id="campaign-performance">Performance overview</h2>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <h3>Active campaigns</h3>
-              <p class="stat-value">42</p>
-              <p class="stat-caption">8 paused for optimisation</p>
-            </article>
-            <article class="stat-card">
-              <h3>Top campaign ROAS</h3>
-              <p class="stat-value">5.6×</p>
-              <p class="stat-caption">Brand - Mixer Grinder | Exact</p>
-            </article>
-            <article class="stat-card">
-              <h3>Impressions</h3>
-              <p class="stat-value">9.6M</p>
-              <p class="stat-caption">Up 21% with peak season bids</p>
-            </article>
-            <article class="stat-card">
-              <h3>New-to-brand</h3>
-              <p class="stat-value">38%</p>
-              <p class="stat-caption">Sponsored Brands driving first-time buyers</p>
-            </article>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="campaign-table">
-          <h2 id="campaign-table">Campaign drilldown</h2>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">Campaign</th>
-                  <th scope="col">Type</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Spend</th>
-                  <th scope="col">Sales</th>
-                  <th scope="col">ACOS</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Mixer Grinder · Exact</td>
-                  <td>Sponsored Products</td>
-                  <td>Active</td>
-                  <td>₹1.6L</td>
-                  <td>₹8.9L</td>
-                  <td>18.0%</td>
-                </tr>
-                <tr>
-                  <td>Home Essentials · Video</td>
-                  <td>Sponsored Brands</td>
-                  <td>Active</td>
-                  <td>₹1.1L</td>
-                  <td>₹3.8L</td>
-                  <td>28.9%</td>
-                </tr>
-                <tr>
-                  <td>Cookware Retargeting</td>
-                  <td>Sponsored Display</td>
-                  <td>Paused</td>
-                  <td>₹0.7L</td>
-                  <td>₹1.1L</td>
-                  <td>63.5%</td>
-                </tr>
-                <tr>
-                  <td>Prime Day Warmup</td>
-                  <td>Sponsored Products</td>
-                  <td>Scheduled</td>
-                  <td>₹0.0</td>
-                  <td>₹0.0</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="campaign-actions">
-          <h2 id="campaign-actions">Recommended actions</h2>
-          <div class="glance-grid">
-            <article class="glance-card">
-              <h3>Bid automation</h3>
-              <p>Enable dynamic bids for 6 high-velocity Sponsored Products campaigns.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Audience retargeting</h3>
-              <p>Build remarketing segments from last 30 days of add-to-carts.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Seasonal launch</h3>
-              <p>Prepare Prime Day campaign set with tiered budgets and lightning deals.</p>
-            </article>
-          </div>
-        </section>
+      <main class="page-main" data-dynamic-main>
+        <div class="page-fallback" role="status">
+          <p>This dashboard loads content dynamically. Enable JavaScript to continue.</p>
+        </div>
       </main>
     </div>
   </div>

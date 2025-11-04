@@ -31,117 +31,37 @@
     <div class="sidebar-overlay" data-sidebar-overlay></div>
     <div class="page-content">
       <header class="dashboard-header">
-        <div class="header-left">
-          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
-            <span class="sr-only">Toggle sidebar</span>
-            <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
-          </button>
-          <div class="header-title">
-            <small>Profile</small>
-            <h1>Profile</h1>
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="header-brand">
-            <span>Wissen Ecom</span>
-            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+        <div class="header-inner">
+          <div class="header-left">
+            <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
               <span class="sr-only">Toggle sidebar</span>
-              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
+            </button>
+            <div class="header-title">
+              <small data-header-subtitle></small>
+              <h1 data-header-title></h1>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-brand">
+              <span class="brand">Wissen Ecom</span>
+              <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+                <span class="sr-only">Toggle sidebar</span>
+                <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              </button>
+            </div>
+            <button class="btn logout-btn" type="button">
+              <i aria-hidden="true" data-lucide="log-out"></i>
+              <span>Logout</span>
             </button>
           </div>
-          <button class="btn logout-btn" type="button">
-            <i aria-hidden="true" data-lucide="log-out"></i>
-            <span>Logout</span>
-          </button>
         </div>
+        <div class="sr-only" aria-live="polite" data-page-announcer></div>
       </header>
-      <main class="page-main">
-        <section class="content-section" aria-labelledby="profile-overview">
-          <h2 id="profile-overview">Account preferences</h2>
-          <div class="glance-grid">
-            <article class="glance-card">
-              <h3>Role-based access</h3>
-              <p>Current role: Admin · Last login from Chennai, India · MFA enforced.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Notification summary</h3>
-              <p>Weekly business summary, low inventory alerts, and compliance escalations enabled.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Security checklist</h3>
-              <p>Password rotated 21 days ago. Next rotation reminder in 9 days.</p>
-            </article>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="profile-details">
-          <h2 id="profile-details">Profile details</h2>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <tbody>
-                <tr>
-                  <th scope="row">Name</th>
-                  <td>Ananya Sharma</td>
-                </tr>
-                <tr>
-                  <th scope="row">Email</th>
-                  <td>ananya.sharma@wissenecom.com</td>
-                </tr>
-                <tr>
-                  <th scope="row">Role</th>
-                  <td>Account Director</td>
-                </tr>
-                <tr>
-                  <th scope="row">Contact</th>
-                  <td>+91-98765-43210</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="profile-settings">
-          <h2 id="profile-settings">Update settings</h2>
-          <form class="glance-grid" novalidate>
-            <div class="glance-card">
-              <h3>Notification channels</h3>
-              <p>Select delivery methods for alerts.</p>
-              <label>
-                <input type="checkbox" checked disabled> Email
-              </label>
-              <label>
-                <input type="checkbox" checked disabled> SMS
-              </label>
-              <label>
-                <input type="checkbox" disabled> WhatsApp
-              </label>
-            </div>
-            <div class="glance-card">
-              <h3>Digest frequency</h3>
-              <p>Choose reporting cadence.</p>
-              <label>
-                <input type="radio" name="digest" checked disabled> Weekly summary
-              </label>
-              <label>
-                <input type="radio" name="digest" disabled> Daily snapshot
-              </label>
-              <label>
-                <input type="radio" name="digest" disabled> Monthly board pack
-              </label>
-            </div>
-            <div class="glance-card">
-              <h3>Security</h3>
-              <p>Manage login and authentication controls.</p>
-              <label>
-                <input type="checkbox" checked disabled> Multi-factor authentication
-              </label>
-              <label>
-                <input type="checkbox" checked disabled> Session timeout alerts
-              </label>
-              <label>
-                <input type="checkbox" disabled> Device verification prompts
-              </label>
-            </div>
-          </form>
-        </section>
+      <main class="page-main" data-dynamic-main>
+        <div class="page-fallback" role="status">
+          <p>This dashboard loads content dynamically. Enable JavaScript to continue.</p>
+        </div>
       </main>
     </div>
   </div>

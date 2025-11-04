@@ -31,115 +31,37 @@
     <div class="sidebar-overlay" data-sidebar-overlay></div>
     <div class="page-content">
       <header class="dashboard-header">
-        <div class="header-left">
-          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
-            <span class="sr-only">Toggle sidebar</span>
-            <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
-          </button>
-          <div class="header-title">
-            <h1>Dashboard overview</h1>
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="header-brand">
-            <span>Wissen Ecom</span>
-            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+        <div class="header-inner">
+          <div class="header-left">
+            <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
               <span class="sr-only">Toggle sidebar</span>
-              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
+            </button>
+            <div class="header-title">
+              <small data-header-subtitle></small>
+              <h1 data-header-title></h1>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-brand">
+              <span class="brand">Wissen Ecom</span>
+              <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+                <span class="sr-only">Toggle sidebar</span>
+                <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              </button>
+            </div>
+            <button class="btn logout-btn" type="button">
+              <i aria-hidden="true" data-lucide="log-out"></i>
+              <span>Logout</span>
             </button>
           </div>
-          <button class="btn logout-btn" type="button">
-            <i aria-hidden="true" data-lucide="log-out"></i>
-            <span>Logout</span>
-          </button>
         </div>
+        <div class="sr-only" aria-live="polite" data-page-announcer></div>
       </header>
-      <main class="page-main">
-        <section class="content-section" aria-labelledby="dashboard-metrics">
-          <h2 id="dashboard-metrics">Key metrics</h2>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <h3>Revenue (30 days)</h3>
-              <p class="stat-value">₹82.4L</p>
-              <p class="stat-caption">Up 12.4% vs. previous cycle</p>
-            </article>
-            <article class="stat-card">
-              <h3>Units sold</h3>
-              <p class="stat-value">18,245</p>
-              <p class="stat-caption">Top SKUs contributing 68% of sales</p>
-            </article>
-            <article class="stat-card">
-              <h3>Return rate</h3>
-              <p class="stat-value">1.9%</p>
-              <p class="stat-caption">Improved by 0.6 pts week over week</p>
-            </article>
-            <article class="stat-card">
-              <h3>Ad ACOS</h3>
-              <p class="stat-value">23.4%</p>
-              <p class="stat-caption">Holding steady within target range</p>
-            </article>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="dashboard-insights">
-          <h2 id="dashboard-insights">Highlights at a glance</h2>
-          <div class="glance-grid">
-            <article class="glance-card">
-              <h3>Best performing category</h3>
-              <p>Home essentials grew 19% with repeat purchases driving 44% of volume.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Watch list</h3>
-              <p>Two private-label SKUs triggered low inventory alerts; replenish within 4 days.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Customer sentiment</h3>
-              <p>Average rating moved to 4.6★ with 92 new reviews published this week.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Compliance</h3>
-              <p>No new policy notifications. Respond to pending documentation by Friday.</p>
-            </article>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="dashboard-table">
-          <h2 id="dashboard-table">Performance by channel</h2>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">Channel</th>
-                  <th scope="col">Revenue</th>
-                  <th scope="col">Orders</th>
-                  <th scope="col">Refunds</th>
-                  <th scope="col">Conversion</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>FBA</td>
-                  <td>₹56.2L</td>
-                  <td>11,235</td>
-                  <td>1.1%</td>
-                  <td>18.4%</td>
-                </tr>
-                <tr>
-                  <td>FBM</td>
-                  <td>₹18.4L</td>
-                  <td>5,215</td>
-                  <td>2.2%</td>
-                  <td>12.6%</td>
-                </tr>
-                <tr>
-                  <td>Amazon Global</td>
-                  <td>₹7.8L</td>
-                  <td>1,795</td>
-                  <td>1.4%</td>
-                  <td>16.1%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+      <main class="page-main" data-dynamic-main>
+        <div class="page-fallback" role="status">
+          <p>This dashboard loads content dynamically. Enable JavaScript to continue.</p>
+        </div>
       </main>
     </div>
   </div>

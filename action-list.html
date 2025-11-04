@@ -31,114 +31,37 @@
     <div class="sidebar-overlay" data-sidebar-overlay></div>
     <div class="page-content">
       <header class="dashboard-header">
-        <div class="header-left">
-          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
-            <span class="sr-only">Toggle sidebar</span>
-            <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
-          </button>
-          <div class="header-title">
-            <small>Action list</small>
-            <h1>Action list</h1>
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="header-brand">
-            <span>Wissen Ecom</span>
-            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+        <div class="header-inner">
+          <div class="header-left">
+            <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
               <span class="sr-only">Toggle sidebar</span>
-              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
+            </button>
+            <div class="header-title">
+              <small data-header-subtitle></small>
+              <h1 data-header-title></h1>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-brand">
+              <span class="brand">Wissen Ecom</span>
+              <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+                <span class="sr-only">Toggle sidebar</span>
+                <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              </button>
+            </div>
+            <button class="btn logout-btn" type="button">
+              <i aria-hidden="true" data-lucide="log-out"></i>
+              <span>Logout</span>
             </button>
           </div>
-          <button class="btn logout-btn" type="button">
-            <i aria-hidden="true" data-lucide="log-out"></i>
-            <span>Logout</span>
-          </button>
         </div>
+        <div class="sr-only" aria-live="polite" data-page-announcer></div>
       </header>
-      <main class="page-main">
-        <section class="content-section" aria-labelledby="action-priorities">
-          <h2 id="action-priorities">Critical priorities</h2>
-          <div class="glance-grid">
-            <article class="glance-card">
-              <h3>Policy response</h3>
-              <p>Submit the updated product compliance declaration for KitchenPro within 48 hours.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Inventory transfer</h3>
-              <p>Schedule 1,200 units of the flagship blender from regional warehouse to FBA before Friday.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Review recovery</h3>
-              <p>Respond to 14 neutral reviews using the approved customer-care templates.</p>
-            </article>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="workflow-table">
-          <h2 id="workflow-table">Team assignments</h2>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">Task</th>
-                  <th scope="col">Owner</th>
-                  <th scope="col">Due</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Impact</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Resolve suppressed listing for SKU-AX91</td>
-                  <td>Compliance</td>
-                  <td>Today</td>
-                  <td>In progress</td>
-                  <td>High</td>
-                </tr>
-                <tr>
-                  <td>Launch Brand Store holiday refresh</td>
-                  <td>Creative</td>
-                  <td>2 days</td>
-                  <td>Not started</td>
-                  <td>Medium</td>
-                </tr>
-                <tr>
-                  <td>Optimize SP campaigns for long-tail keywords</td>
-                  <td>Performance</td>
-                  <td>3 days</td>
-                  <td>In review</td>
-                  <td>High</td>
-                </tr>
-                <tr>
-                  <td>Prepare weekly finance reconciliation</td>
-                  <td>Finance</td>
-                  <td>Tomorrow</td>
-                  <td>Scheduled</td>
-                  <td>Medium</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="upcoming-checkpoints">
-          <h2 id="upcoming-checkpoints">Upcoming checkpoints</h2>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <h3>Inbound shipments</h3>
-              <p class="stat-value">5</p>
-              <p class="stat-caption">Expected to arrive at FBA within the next 72 hours.</p>
-            </article>
-            <article class="stat-card">
-              <h3>Tickets awaiting reply</h3>
-              <p class="stat-value">9</p>
-              <p class="stat-caption">Prioritize customer escalations with 24-hour SLA.</p>
-            </article>
-            <article class="stat-card">
-              <h3>Content refresh</h3>
-              <p class="stat-value">12</p>
-              <p class="stat-caption">Listings flagged for additional A+ content assets.</p>
-            </article>
-          </div>
-        </section>
+      <main class="page-main" data-dynamic-main>
+        <div class="page-fallback" role="status">
+          <p>This dashboard loads content dynamically. Enable JavaScript to continue.</p>
+        </div>
       </main>
     </div>
   </div>
