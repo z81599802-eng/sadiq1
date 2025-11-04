@@ -9,7 +9,6 @@
   const mobileIconSlot = mobileToggle ? mobileToggle.querySelector('[data-icon-slot="mobile"]') : null;
   const main = document.querySelector('[data-dynamic-main]');
   const headerTitle = document.querySelector('[data-header-title]');
-  const headerSubtitle = document.querySelector('[data-header-subtitle]');
   const announcer = document.querySelector('[data-page-announcer]');
   const mobileQuery = window.matchMedia('(max-width: 960px)');
   const storageKey = 'wissen-dashboard-sidebar-open';
@@ -236,9 +235,6 @@
       headerTitle.textContent = config.title;
     }
 
-    if (headerSubtitle) {
-      headerSubtitle.textContent = config.subtitle;
-    }
   };
 
   const announcePageChange = (config) => {

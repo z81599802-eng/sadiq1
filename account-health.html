@@ -12,7 +12,7 @@
 <body class="dashboard-theme" data-page="account-health">
   <div class="dashboard-shell">
     <aside class="sidebar" aria-label="Wissen Ecom navigation">
-      <div class="sidebar-brand"><span>Wissen Ecom</span></div>
+      <div class="sidebar-brand"><a class="sidebar-brand-link" href="index.html">Wissen Ecom</a></div>
       <nav aria-label="Dashboard sections">
         <ul>
           <li><a class="sidebar-link" data-page-target="dashboard" href="dashboard.html"><i aria-hidden="true" data-lucide="layout-dashboard"></i>Dashboard</a></li>
@@ -32,29 +32,21 @@
     <div class="page-content">
       <header class="dashboard-header">
         <div class="header-inner">
-          <div class="header-left">
+          <div class="header-start">
             <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
               <span class="sr-only">Toggle sidebar</span>
               <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
             </button>
-            <div class="header-title">
-              <small data-header-subtitle></small>
-              <h1 data-header-title></h1>
-            </div>
-          </div>
-          <div class="header-right">
-            <div class="header-brand">
-              <span class="brand">Wissen Ecom</span>
-              <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
-                <span class="sr-only">Toggle sidebar</span>
-                <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
-              </button>
-            </div>
-            <button class="btn logout-btn" type="button">
-              <i aria-hidden="true" data-lucide="log-out"></i>
-              <span>Logout</span>
+            <button class="sidebar-toggle mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+              <span class="sr-only">Toggle sidebar</span>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
             </button>
+            <h1 class="header-title" data-header-title></h1>
           </div>
+          <button class="btn logout-btn" type="button">
+            <i aria-hidden="true" data-lucide="log-out"></i>
+            <span>Logout</span>
+          </button>
         </div>
         <div class="sr-only" aria-live="polite" data-page-announcer></div>
       </header>
