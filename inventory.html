@@ -31,119 +31,37 @@
     <div class="sidebar-overlay" data-sidebar-overlay></div>
     <div class="page-content">
       <header class="dashboard-header">
-        <div class="header-left">
-          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
-            <span class="sr-only">Toggle sidebar</span>
-            <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
-          </button>
-          <div class="header-title">
-            <small>Inventory overview</small>
-            <h1>Inventory overview</h1>
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="header-brand">
-            <span>Wissen Ecom</span>
-            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+        <div class="header-inner">
+          <div class="header-left">
+            <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
               <span class="sr-only">Toggle sidebar</span>
-              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
+            </button>
+            <div class="header-title">
+              <small data-header-subtitle></small>
+              <h1 data-header-title></h1>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-brand">
+              <span class="brand">Wissen Ecom</span>
+              <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+                <span class="sr-only">Toggle sidebar</span>
+                <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              </button>
+            </div>
+            <button class="btn logout-btn" type="button">
+              <i aria-hidden="true" data-lucide="log-out"></i>
+              <span>Logout</span>
             </button>
           </div>
-          <button class="btn logout-btn" type="button">
-            <i aria-hidden="true" data-lucide="log-out"></i>
-            <span>Logout</span>
-          </button>
         </div>
+        <div class="sr-only" aria-live="polite" data-page-announcer></div>
       </header>
-      <main class="page-main">
-        <section class="content-section" aria-labelledby="inventory-health">
-          <h2 id="inventory-health">Stock health</h2>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <h3>Sellable units</h3>
-              <p class="stat-value">68,420</p>
-              <p class="stat-caption">Adequate cover for 29 days</p>
-            </article>
-            <article class="stat-card">
-              <h3>Restock needed</h3>
-              <p class="stat-value">14 SKUs</p>
-              <p class="stat-caption">Prioritise top 5 revenue drivers</p>
-            </article>
-            <article class="stat-card">
-              <h3>Inbound to FBA</h3>
-              <p class="stat-value">7,250</p>
-              <p class="stat-caption">Two shipments delayed at carrier hub</p>
-            </article>
-            <article class="stat-card">
-              <h3>Stranded listings</h3>
-              <p class="stat-value">3</p>
-              <p class="stat-caption">Fix listing errors to recover availability</p>
-            </article>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="inventory-table">
-          <h2 id="inventory-table">Replenishment plan</h2>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">SKU</th>
-                  <th scope="col">Product</th>
-                  <th scope="col">Days of cover</th>
-                  <th scope="col">Suggested reorder</th>
-                  <th scope="col">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>WB-XS100</td>
-                  <td>Smart Blender Pro</td>
-                  <td>12</td>
-                  <td>1,800 units</td>
-                  <td>Order processing</td>
-                </tr>
-                <tr>
-                  <td>WB-FP210</td>
-                  <td>Food Processor Elite</td>
-                  <td>8</td>
-                  <td>1,200 units</td>
-                  <td>Awaiting approval</td>
-                </tr>
-                <tr>
-                  <td>WB-KT540</td>
-                  <td>Electric Kettle Plus</td>
-                  <td>22</td>
-                  <td>900 units</td>
-                  <td>Stock sufficient</td>
-                </tr>
-                <tr>
-                  <td>WB-AF330</td>
-                  <td>Air Fryer Duo</td>
-                  <td>6</td>
-                  <td>2,400 units</td>
-                  <td>Urgent</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="inventory-actions">
-          <h2 id="inventory-actions">Operational alerts</h2>
-          <div class="glance-grid">
-            <article class="glance-card">
-              <h3>Restock limits</h3>
-              <p>Utilisation at 78%. Plan removal of aged inventory to reclaim 12% capacity.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Storage fees</h3>
-              <p>Long-term storage charges projected at ₹1.1L next cycle; clear slow movers.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Vendor coordination</h3>
-              <p>Align with suppliers on staggered shipments to avoid congestion.</p>
-            </article>
-          </div>
-        </section>
+      <main class="page-main" data-dynamic-main>
+        <div class="page-fallback" role="status">
+          <p>This dashboard loads content dynamically. Enable JavaScript to continue.</p>
+        </div>
       </main>
     </div>
   </div>

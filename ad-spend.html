@@ -31,112 +31,37 @@
     <div class="sidebar-overlay" data-sidebar-overlay></div>
     <div class="page-content">
       <header class="dashboard-header">
-        <div class="header-left">
-          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
-            <span class="sr-only">Toggle sidebar</span>
-            <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
-          </button>
-          <div class="header-title">
-            <small>Ad spend overview</small>
-            <h1>Ad spend overview</h1>
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="header-brand">
-            <span>Wissen Ecom</span>
-            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+        <div class="header-inner">
+          <div class="header-left">
+            <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
               <span class="sr-only">Toggle sidebar</span>
-              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
+            </button>
+            <div class="header-title">
+              <small data-header-subtitle></small>
+              <h1 data-header-title></h1>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-brand">
+              <span class="brand">Wissen Ecom</span>
+              <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+                <span class="sr-only">Toggle sidebar</span>
+                <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
+              </button>
+            </div>
+            <button class="btn logout-btn" type="button">
+              <i aria-hidden="true" data-lucide="log-out"></i>
+              <span>Logout</span>
             </button>
           </div>
-          <button class="btn logout-btn" type="button">
-            <i aria-hidden="true" data-lucide="log-out"></i>
-            <span>Logout</span>
-          </button>
         </div>
+        <div class="sr-only" aria-live="polite" data-page-announcer></div>
       </header>
-      <main class="page-main">
-        <section class="content-section" aria-labelledby="ad-metrics">
-          <h2 id="ad-metrics">Spend performance</h2>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <h3>Total ad spend (30 days)</h3>
-              <p class="stat-value">₹18.6L</p>
-              <p class="stat-caption">Down 8.3% vs. last month</p>
-            </article>
-            <article class="stat-card">
-              <h3>Attributed sales</h3>
-              <p class="stat-value">₹64.2L</p>
-              <p class="stat-caption">ROAS 3.45 across Sponsored Ads</p>
-            </article>
-            <article class="stat-card">
-              <h3>Cost per click</h3>
-              <p class="stat-value">₹14.50</p>
-              <p class="stat-caption">Improved 6% with negative keyword updates</p>
-            </article>
-            <article class="stat-card">
-              <h3>Detail page views</h3>
-              <p class="stat-value">412K</p>
-              <p class="stat-caption">Strong uplift from video creative tests</p>
-            </article>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="ad-breakdown">
-          <h2 id="ad-breakdown">Budget allocation</h2>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">Campaign type</th>
-                  <th scope="col">Spend</th>
-                  <th scope="col">Sales</th>
-                  <th scope="col">ACOS</th>
-                  <th scope="col">Budget usage</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Sponsored Products</td>
-                  <td>₹9.4L</td>
-                  <td>₹39.6L</td>
-                  <td>23.7%</td>
-                  <td>92%</td>
-                </tr>
-                <tr>
-                  <td>Sponsored Brands</td>
-                  <td>₹5.8L</td>
-                  <td>₹18.4L</td>
-                  <td>31.5%</td>
-                  <td>76%</td>
-                </tr>
-                <tr>
-                  <td>Sponsored Display</td>
-                  <td>₹3.4L</td>
-                  <td>₹6.2L</td>
-                  <td>54.8%</td>
-                  <td>68%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-        <section class="content-section" aria-labelledby="optimization-focus">
-          <h2 id="optimization-focus">Optimisation focus</h2>
-          <div class="glance-grid">
-            <article class="glance-card">
-              <h3>Budget pacing</h3>
-              <p>Shift 12% of daily budget from underperforming display sets to high-converting exact match SP.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Creative testing</h3>
-              <p>Deploy refreshed Sponsored Brands video creative for top 5 ASINs this week.</p>
-            </article>
-            <article class="glance-card">
-              <h3>Keyword expansion</h3>
-              <p>Add 24 long-tail keywords sourced from search term report to manual campaigns.</p>
-            </article>
-          </div>
-        </section>
+      <main class="page-main" data-dynamic-main>
+        <div class="page-fallback" role="status">
+          <p>This dashboard loads content dynamically. Enable JavaScript to continue.</p>
+        </div>
       </main>
     </div>
   </div>
