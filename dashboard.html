@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dashboard-theme sidebar-collapsed" data-page="dashboard">
+<body class="dashboard-theme" data-page="dashboard">
   <div class="dashboard-shell">
     <aside class="sidebar" aria-label="Wissen Ecom navigation">
       <div class="sidebar-brand"><span>Wissen Ecom</span></div>
@@ -34,10 +34,9 @@
         <div class="header-left">
           <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
             <span class="sr-only">Toggle sidebar</span>
-            <i aria-hidden="true" data-lucide="panel-left-close"></i>
+            <span aria-hidden="true" class="toggle-icon" data-icon-slot="desktop"></span>
           </button>
           <div class="header-title">
-            <small>Toggle sidebar</small>
             <h1>Dashboard overview</h1>
           </div>
         </div>
@@ -46,10 +45,10 @@
             <span>Wissen Ecom</span>
             <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
               <span class="sr-only">Toggle sidebar</span>
-              <i aria-hidden="true" data-lucide="text-align-start"></i>
+              <span aria-hidden="true" class="toggle-icon" data-icon-slot="mobile"></span>
             </button>
           </div>
-          <button class="logout-btn" type="button">
+          <button class="btn logout-btn" type="button">
             <i aria-hidden="true" data-lucide="log-out"></i>
             <span>Logout</span>
           </button>
