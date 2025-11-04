@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wissen Ecom | Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-theme sidebar-collapsed" data-page="inventory">
+  <div class="dashboard-shell">
+    <aside class="sidebar" aria-label="Wissen Ecom navigation">
+      <div class="sidebar-brand"><span>Wissen Ecom</span></div>
+      <nav aria-label="Dashboard sections">
+        <ul>
+          <li><a class="sidebar-link" data-page-target="dashboard" href="dashboard.html"><i aria-hidden="true" data-lucide="layout-dashboard"></i>Dashboard</a></li>
+          <li><a class="sidebar-link" data-page-target="action-list" href="action-list.html"><i aria-hidden="true" data-lucide="list-todo"></i>Action List</a></li>
+          <li><a class="sidebar-link" data-page-target="account-health" href="account-health.html"><i aria-hidden="true" data-lucide="heart-pulse"></i>Account Health</a></li>
+          <li><a class="sidebar-link" data-page-target="ad-spend" href="ad-spend.html"><i aria-hidden="true" data-lucide="coins"></i>Ad Spend</a></li>
+          <li><a class="sidebar-link" data-page-target="campaigns" href="campaigns.html"><i aria-hidden="true" data-lucide="target"></i>Campaigns</a></li>
+          <li><a class="sidebar-link" data-page-target="inventory" href="inventory.html"><i aria-hidden="true" data-lucide="package-search"></i>Inventory</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <span>Settings</span>
+        <a class="profile-link" data-page-target="profile" href="profile.html"><i aria-hidden="true" data-lucide="user"></i>Profile</a>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" data-sidebar-overlay></div>
+    <div class="page-content">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
+            <span class="sr-only">Toggle sidebar</span>
+            <i aria-hidden="true" data-lucide="panel-left-close"></i>
+          </button>
+          <div class="header-title">
+            <small>Inventory overview</small>
+            <h1>Inventory overview</h1>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="header-brand">
+            <span>Wissen Ecom</span>
+            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+              <span class="sr-only">Toggle sidebar</span>
+              <i aria-hidden="true" data-lucide="text-align-start"></i>
+            </button>
+          </div>
+          <button class="logout-btn" type="button">
+            <i aria-hidden="true" data-lucide="log-out"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </header>
+      <main class="page-main">
+        <section class="content-section" aria-labelledby="inventory-health">
+          <h2 id="inventory-health">Stock health</h2>
+          <div class="stats-grid">
+            <article class="stat-card">
+              <h3>Sellable units</h3>
+              <p class="stat-value">68,420</p>
+              <p class="stat-caption">Adequate cover for 29 days</p>
+            </article>
+            <article class="stat-card">
+              <h3>Restock needed</h3>
+              <p class="stat-value">14 SKUs</p>
+              <p class="stat-caption">Prioritise top 5 revenue drivers</p>
+            </article>
+            <article class="stat-card">
+              <h3>Inbound to FBA</h3>
+              <p class="stat-value">7,250</p>
+              <p class="stat-caption">Two shipments delayed at carrier hub</p>
+            </article>
+            <article class="stat-card">
+              <h3>Stranded listings</h3>
+              <p class="stat-value">3</p>
+              <p class="stat-caption">Fix listing errors to recover availability</p>
+            </article>
+          </div>
+        </section>
+        <section class="content-section" aria-labelledby="inventory-table">
+          <h2 id="inventory-table">Replenishment plan</h2>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">SKU</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Days of cover</th>
+                  <th scope="col">Suggested reorder</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>WB-XS100</td>
+                  <td>Smart Blender Pro</td>
+                  <td>12</td>
+                  <td>1,800 units</td>
+                  <td>Order processing</td>
+                </tr>
+                <tr>
+                  <td>WB-FP210</td>
+                  <td>Food Processor Elite</td>
+                  <td>8</td>
+                  <td>1,200 units</td>
+                  <td>Awaiting approval</td>
+                </tr>
+                <tr>
+                  <td>WB-KT540</td>
+                  <td>Electric Kettle Plus</td>
+                  <td>22</td>
+                  <td>900 units</td>
+                  <td>Stock sufficient</td>
+                </tr>
+                <tr>
+                  <td>WB-AF330</td>
+                  <td>Air Fryer Duo</td>
+                  <td>6</td>
+                  <td>2,400 units</td>
+                  <td>Urgent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="content-section" aria-labelledby="inventory-actions">
+          <h2 id="inventory-actions">Operational alerts</h2>
+          <div class="glance-grid">
+            <article class="glance-card">
+              <h3>Restock limits</h3>
+              <p>Utilisation at 78%. Plan removal of aged inventory to reclaim 12% capacity.</p>
+            </article>
+            <article class="glance-card">
+              <h3>Storage fees</h3>
+              <p>Long-term storage charges projected at ₹1.1L next cycle; clear slow movers.</p>
+            </article>
+            <article class="glance-card">
+              <h3>Vendor coordination</h3>
+              <p>Align with suppliers on staggered shipments to avoid congestion.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

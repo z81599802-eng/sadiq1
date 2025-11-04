@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wissen Ecom | Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-theme sidebar-collapsed" data-page="profile">
+  <div class="dashboard-shell">
+    <aside class="sidebar" aria-label="Wissen Ecom navigation">
+      <div class="sidebar-brand"><span>Wissen Ecom</span></div>
+      <nav aria-label="Dashboard sections">
+        <ul>
+          <li><a class="sidebar-link" data-page-target="dashboard" href="dashboard.html"><i aria-hidden="true" data-lucide="layout-dashboard"></i>Dashboard</a></li>
+          <li><a class="sidebar-link" data-page-target="action-list" href="action-list.html"><i aria-hidden="true" data-lucide="list-todo"></i>Action List</a></li>
+          <li><a class="sidebar-link" data-page-target="account-health" href="account-health.html"><i aria-hidden="true" data-lucide="heart-pulse"></i>Account Health</a></li>
+          <li><a class="sidebar-link" data-page-target="ad-spend" href="ad-spend.html"><i aria-hidden="true" data-lucide="coins"></i>Ad Spend</a></li>
+          <li><a class="sidebar-link" data-page-target="campaigns" href="campaigns.html"><i aria-hidden="true" data-lucide="target"></i>Campaigns</a></li>
+          <li><a class="sidebar-link" data-page-target="inventory" href="inventory.html"><i aria-hidden="true" data-lucide="package-search"></i>Inventory</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <span>Settings</span>
+        <a class="profile-link" data-page-target="profile" href="profile.html"><i aria-hidden="true" data-lucide="user"></i>Profile</a>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" data-sidebar-overlay></div>
+    <div class="page-content">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <button class="sidebar-toggle desktop-toggle" type="button" aria-expanded="false" data-sidebar-toggle="desktop">
+            <span class="sr-only">Toggle sidebar</span>
+            <i aria-hidden="true" data-lucide="panel-left-close"></i>
+          </button>
+          <div class="header-title">
+            <small>Profile</small>
+            <h1>Profile</h1>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="header-brand">
+            <span>Wissen Ecom</span>
+            <button class="mobile-sidebar-toggle" type="button" aria-expanded="false" data-sidebar-toggle="mobile">
+              <span class="sr-only">Toggle sidebar</span>
+              <i aria-hidden="true" data-lucide="text-align-start"></i>
+            </button>
+          </div>
+          <button class="logout-btn" type="button">
+            <i aria-hidden="true" data-lucide="log-out"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </header>
+      <main class="page-main">
+        <section class="content-section" aria-labelledby="profile-overview">
+          <h2 id="profile-overview">Account preferences</h2>
+          <div class="glance-grid">
+            <article class="glance-card">
+              <h3>Role-based access</h3>
+              <p>Current role: Admin · Last login from Chennai, India · MFA enforced.</p>
+            </article>
+            <article class="glance-card">
+              <h3>Notification summary</h3>
+              <p>Weekly business summary, low inventory alerts, and compliance escalations enabled.</p>
+            </article>
+            <article class="glance-card">
+              <h3>Security checklist</h3>
+              <p>Password rotated 21 days ago. Next rotation reminder in 9 days.</p>
+            </article>
+          </div>
+        </section>
+        <section class="content-section" aria-labelledby="profile-details">
+          <h2 id="profile-details">Profile details</h2>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <tbody>
+                <tr>
+                  <th scope="row">Name</th>
+                  <td>Ananya Sharma</td>
+                </tr>
+                <tr>
+                  <th scope="row">Email</th>
+                  <td>ananya.sharma@wissenecom.com</td>
+                </tr>
+                <tr>
+                  <th scope="row">Role</th>
+                  <td>Account Director</td>
+                </tr>
+                <tr>
+                  <th scope="row">Contact</th>
+                  <td>+91-98765-43210</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="content-section" aria-labelledby="profile-settings">
+          <h2 id="profile-settings">Update settings</h2>
+          <form class="glance-grid" novalidate>
+            <div class="glance-card">
+              <h3>Notification channels</h3>
+              <p>Select delivery methods for alerts.</p>
+              <label>
+                <input type="checkbox" checked disabled> Email
+              </label>
+              <label>
+                <input type="checkbox" checked disabled> SMS
+              </label>
+              <label>
+                <input type="checkbox" disabled> WhatsApp
+              </label>
+            </div>
+            <div class="glance-card">
+              <h3>Digest frequency</h3>
+              <p>Choose reporting cadence.</p>
+              <label>
+                <input type="radio" name="digest" checked disabled> Weekly summary
+              </label>
+              <label>
+                <input type="radio" name="digest" disabled> Daily snapshot
+              </label>
+              <label>
+                <input type="radio" name="digest" disabled> Monthly board pack
+              </label>
+            </div>
+            <div class="glance-card">
+              <h3>Security</h3>
+              <p>Manage login and authentication controls.</p>
+              <label>
+                <input type="checkbox" checked disabled> Multi-factor authentication
+              </label>
+              <label>
+                <input type="checkbox" checked disabled> Session timeout alerts
+              </label>
+              <label>
+                <input type="checkbox" disabled> Device verification prompts
+              </label>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
